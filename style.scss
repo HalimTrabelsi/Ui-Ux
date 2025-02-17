@@ -1,0 +1,54 @@
+@import 'variables';
+@import 'mixins';
+
+.profile-card {
+  width: 90%;
+  max-width: 300px;
+  background: $secondary-color;
+  color: $text-color;
+  font-family: $font-stack;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  flex: 1 1 calc(50% - 40px); // Two cards per row on larger screens
+  max-width: 300px; 
+  .profile-img {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .profile-info {
+    padding: 20px;
+    h2 {
+      margin: 10px 0;
+    }
+    p {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+    .btn-primary {
+      @include button-style;
+    }
+  }
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; // Spacing between cards
+}
+@media (max-width: 480px) {
+  .profile-card {
+    flex: 1 1 100%; // Full width on smaller screens
+  }
+  .profile-info {
+    padding: 15px;
+    p {
+      font-size: 12px;
+    }
+  }
+}
