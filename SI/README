@@ -1,6 +1,12 @@
+Login and Sign up pages using html and Tailwind css for front-end dev.
+Simple and responsive design that can be used for screens.
+
+
+
 TO RUN THE PROEJCT
-npm install -g live-server
-live-server /C:/Users/Mega Pc/Desktop/UI/SI
+npm install 
+npx serve
+then click on the page login.html
 
 TEAM MEMBER 
 Halim Trabelsi
